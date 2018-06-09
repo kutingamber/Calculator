@@ -1,0 +1,59 @@
+<html>
+<head>
+<title> Day 3 - Calculator </title>
+<script>
+
+function compute() {
+var pinili = document.getElementById("pinili").value;
+var a,b,c;
+a = Number(document.getElementById("txt1").value);
+b = Number(document.getElementById("txt2").value);
+
+if(pinili=="Add") {c = a+b; document.getElementById("result").innerHTML = "The sum of "+a+" and "+b+" is "+c;}
+
+else if(pinili=="Subtract") {c = b-a; document.getElementById("result").innerHTML = "The difference of "+b+" and "+a+" is "+c;}
+
+else if(pinili=="Multiply") {c = a*b; document.getElementById("result").innerHTML = "The product of "+b+" and "+a+" is "+c;}
+
+else if(pinili=="Divide") {c = b/a; document.getElementById("result").innerHTML = "The quotient of "+b+" and "+a+" is "+c;}
+}
+
+</script>
+<style>
+input{width:200px;}
+</style>
+</head>
+<body>
+
+<br>
+<br>
+<center>
+
+<input type="number" id="txt1" onkeyup="compute()" placeholder="Enter First number"> </br>
+<input type="number" id="txt2" onkeyup="compute()" placeholder="Enter Second number"> </br>
+<select id="pinili" onclick="compute()" onchange="compute()">
+	<option value="Add">Add</option>
+	<option value="Subtract">Subtract</option>
+	<option value="Multiply">Multiply</option>
+	<option value="Divide">Divide</option>
+</select>
+
+<p id="result"> </p>
+
+</center>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
